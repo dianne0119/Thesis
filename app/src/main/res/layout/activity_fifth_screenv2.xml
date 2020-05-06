@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/snackbar_btn"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8FAFB"
+    android:orientation="vertical">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_view"
+        android:layout_width="350dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="40dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="@+id/changeKeyBtn"
+        app:layout_constraintHorizontal_bias="0.789"
+        app:layout_constraintStart_toStartOf="@+id/changeKeyBtn"
+        app:layout_constraintTop_toBottomOf="@+id/immoName"
+        app:lottie_fileName="automatic_check.json"
+        app:lottie_loop="false" />
+
+    <TextView
+        android:id="@+id/immoName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="148dp"
+        android:text="IMB0001"
+        app:layout_constraintBottom_toTopOf="@+id/animation_view"
+        app:layout_constraintEnd_toStartOf="@+id/logOutButton"
+        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintStart_toEndOf="@+id/bluetoothLogo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/bluetoothLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/animation_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_bluetooth_connected_24px" />
+
+    <TextView
+        android:id="@+id/resetDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="You have reset\n a keycode successfully."
+        android:textAlignment="center"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/animation_view"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="@+id/animation_view"
+        app:layout_constraintTop_toBottomOf="@+id/animation_view" />
+
+    <TextView
+        android:id="@+id/manualDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="You have manually change a\n keycode successfully."
+        android:textAlignment="center"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/animation_view"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/animation_view"
+        app:layout_constraintTop_toBottomOf="@+id/animation_view" />
+
+    <TextView
+        android:id="@+id/Desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:textColor="#FF2E2929"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/animation_view"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/animation_view"
+        app:layout_constraintTop_toBottomOf="@+id/animation_view" />
+
+    <Button
+        android:id="@+id/changeKeyBtn"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="317dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="55dp"
+        android:background="#86D2E5"
+        android:text="Change Key"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        app:backgroundTint="#86D2E5"
+        app:layout_constraintBottom_toTopOf="@+id/ResetBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/ResetBtn"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="317dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="10dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FFFFFF"
+        android:text="Reset Key"
+        android:textAllCaps="false"
+        android:textColor="#86D2E5"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/changeKeyBtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/changeKeyBtn" />
+
+    <TextView
+        android:id="@+id/logOutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="339dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="Log out"
+        android:textColor="#86D2E5"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/animation_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,139 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    xmlns:dist="http://schemas.android.com/apk/distribution"
+4    package="com.example.motorcycleapp"
+5    android:versionCode="1"
+6    android:versionName="1.0" >
+7
+8    <uses-sdk
+9        android:minSdkVersion="18"
+9-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml
+10        android:targetSdkVersion="29" />
+10-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml
+11
+12    <dist:module dist:instant="true" />
+12-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:6:5-40
+12-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:6:18-37
+13
+14    <uses-permission android:name="android.permission.BLUETOOTH" />
+14-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:8:5-67
+14-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:8:22-65
+15    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+15-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:9:5-73
+15-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:9:22-71
+16
+17    <application
+17-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:11:5-64:19
+18        android:allowBackup="true"
+18-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:12:9-35
+19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+19-->[androidx.core:core:1.1.0] C:\Users\Kristia Alvarez\.gradle\caches\transforms-2\files-2.1\7f6c41cc2a14c0fbaa8d0166c17dc544\core-1.1.0\AndroidManifest.xml:24:18-86
+20        android:debuggable="true"
+21        android:icon="@mipmap/ic_launcher"
+21-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:13:9-43
+22        android:label="@string/app_name"
+22-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:14:9-41
+23        android:manageSpaceActivity=".lockdownscreen"
+23-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:15:9-54
+24        android:roundIcon="@mipmap/ic_launcher_round"
+24-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:16:9-54
+25        android:supportsRtl="true"
+25-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:17:9-35
+26        android:testOnly="true"
+27        android:theme="@style/AppTheme" >
+27-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:18:9-40
+28        <activity android:name="com.example.motorcycleapp.ActivityFirst" >
+28-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:19:9-25:20
+28-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:19:19-48
+29            <intent-filter>
+29-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:20:13-24:29
+30                <action android:name="android.intent.action.MAIN" />
+30-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:21:17-69
+30-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:21:25-66
+31
+32                <category android:name="android.intent.category.DEFAULT" />
+32-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:23:17-76
+32-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:23:27-73
+33            </intent-filter>
+34        </activity>
+35        <activity android:name="com.example.motorcycleapp.ActivityMainV2" >
+35-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:26:9-27:20
+35-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:26:19-49
+36        </activity>
+37        <activity android:name="com.example.motorcycleapp.ActivityThirdV2" >
+37-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:28:9-29:20
+37-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:28:19-50
+38        </activity>
+39        <activity android:name="com.example.motorcycleapp.ActivityThird21" >
+39-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:30:9-31:20
+39-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:30:19-50
+40        </activity>
+41        <activity android:name="com.example.motorcycleapp.ActivitySeventh2" >
+41-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:32:9-33:20
+41-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:32:19-51
+42        </activity>
+43        <activity android:name="com.example.motorcycleapp.ActivitySeventh21" >
+43-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:34:9-35:20
+43-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:34:19-52
+44        </activity>
+45        <activity android:name="com.example.motorcycleapp.ActivitySecond21" >
+45-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:36:9-37:20
+45-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:36:19-51
+46        </activity>
+47        <activity android:name="com.example.motorcycleapp.ActivityFourthV2" >
+47-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:38:9-39:20
+47-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:38:19-51
+48        </activity>
+49        <activity android:name="com.example.motorcycleapp.ActivityFifthV2" >
+49-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:40:9-41:20
+49-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:40:19-50
+50        </activity>
+51        <activity android:name="com.example.motorcycleapp.ActivitySixthV2" >
+51-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:42:9-43:20
+51-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:42:19-50
+52        </activity>
+53        <activity android:name="com.example.motorcycleapp.ActivitySixthV21" >
+53-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:44:9-45:20
+53-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:44:19-51
+54        </activity>
+55        <activity android:name="com.example.motorcycleapp.lockdownscreen" >
+55-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:46:9-47:20
+55-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:46:19-49
+56        </activity>
+57        <activity android:name="com.example.motorcycleapp.resetPass" >
+57-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:48:9-49:20
+57-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:48:19-44
+58        </activity>
+59        <activity android:name="com.example.motorcycleapp.resetPin" >
+59-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:50:9-51:20
+59-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:50:19-43
+60        </activity>
+61        <activity android:name="com.example.motorcycleapp.successfulSignUp" >
+61-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:52:9-53:20
+61-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:52:19-51
+62        </activity>
+63
+64        <service
+64-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:54:9-77
+65            android:name="com.example.motorcycleapp.BluetoothLeService"
+65-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:54:18-52
+66            android:enabled="true" />
+66-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:54:53-75
+67
+68        <activity android:name="com.example.motorcycleapp.activity_splashScreen" >
+68-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:55:9-62:20
+68-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:55:19-56
+69            <intent-filter>
+69-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:56:13-60:29
+70                <action android:name="android.intent.action.MAIN" />
+70-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:21:17-69
+70-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:21:25-66
+71
+72                <category android:name="android.intent.category.LAUNCHER" />
+72-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:59:17-77
+72-->C:\Users\Kristia Alvarez\Documents\THESIS\APP\With Encryption\FinalThesis\Thesis\motorcycleApp\app\src\main\AndroidManifest.xml:59:27-74
+73            </intent-filter>
+74        </activity>
+75    </application>
+76
+77</manifest>

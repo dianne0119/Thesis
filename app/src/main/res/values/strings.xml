@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Camma</string>
+    <string name="home_text_view_string">A keycode maintenance management app for motorcycle electronic security measures</string>
+    <string name="welcome_text">Welcome to Certainty</string>
+    <string name="password">Password</string>
+
+    <string name="app_disabled">Please go to the manufacturer to re-install the app</string>
+    <string name="unknown_service">Unknown service</string>
+    <string name="error_bluetooth_not_supported">Bluetooth not supported.</string>
+</resources>

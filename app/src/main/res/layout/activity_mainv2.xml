@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8fafb"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="168dp"
+        android:text="Keep Connected"
+        android:textColor="#010B1F"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:fontFamily="monospace"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="319dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="20dp"
+        android:text="Enter your username and password to get access to your account."
+        android:textColor="#746971"
+        android:textSize="15sp"
+        android:fontFamily="sans-serif"
+        app:layout_constraintEnd_toEndOf="@+id/textView8"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <Button
+        android:id="@+id/loginButton"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="317dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="47dp"
+        android:background="#86D2E5"
+        android:backgroundTint="#86D2E5"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/signUpbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/signUpbutton"
+        android:layout_width="317dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="10dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FFFFFF"
+        android:text="Sign Up"
+        android:textAllCaps="false"
+        android:textColor="#86D2E5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/loginButton"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/loginButton" />
+
+    <TextView
+        android:id="@+id/forgot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Forgot Password?"
+        android:textColor="#746971"
+        android:textSize="15sp"
+        android:fontFamily="sans-serif"
+        app:layout_constraintBottom_toTopOf="@+id/loginButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.844"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
+        app:layout_constraintVertical_bias="0.012" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="317dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textColorHint="#746971"
+        app:layout_constraintEnd_toEndOf="@+id/loginButton"
+        app:layout_constraintStart_toStartOf="@+id/loginButton"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="#746971"
+        app:boxStrokeColor="#86D2E5"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/pin"
+            android:layout_width="317dp"
+            android:layout_height="55dp"
+            android:drawableStart="@drawable/ic_action_pass"
+            android:drawablePadding="10dp"
+            android:ems="5"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingLeft="10dp" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/messageAttempt"
+        android:layout_width="410dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="1dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#E95489"
+        android:gravity="center"
+        android:text="     Account permanently disabled."
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/errorIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="35dp"
+        app:layout_constraintBottom_toBottomOf="@+id/messageAttempt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/messageAttempt"
+        app:srcCompat="@drawable/ic_error" />
+
+    <TextView
+        android:id="@+id/tempDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="        Please see the manufacturer to re-download the app."
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/messageAttempt"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/messageAttempt"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="317dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColorHint="#746971"
+        app:boxStrokeColor="#86D2E5"
+        app:layout_constraintEnd_toEndOf="@+id/loginButton"
+        app:layout_constraintStart_toStartOf="@+id/loginButton"
+        app:layout_constraintTop_toBottomOf="@+id/textView9">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/userName"
+            android:layout_width="317dp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_action_user"
+            android:drawablePadding="10dp"
+            android:ems="5"
+            android:hint="Username"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="tempDesc,errorIcon,messageAttempt" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
