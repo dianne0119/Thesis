@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Kristia Alvarez\\Documents\\THESIS\\APP\\With Encryption\\FinalThesis\\Thesis\\motorcycleApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w480dp-port-v13\\values-w480dp-port-v13.xml",
+            "outputFile": "/home/dayaanaem19/Documents/ThesisGithubRepo/motorcycleApp/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w480dp-port-v13/values-w480dp-port-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Kristia Alvarez\\.gradle\\caches\\transforms-2\\files-2.1\\8e4164242d330790f65e8f79ba433c7a\\material-1.2.0-alpha04\\res\\values-w480dp-port-v13\\values-w480dp-port-v13.xml",
+                    "source": "/home/dayaanaem19/.gradle/caches/transforms-2/files-2.1/8e4164242d330790f65e8f79ba433c7a/material-1.2.0-alpha04/res/values-w480dp-port-v13/values-w480dp-port-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

@@ -8,6 +8,12 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="textInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">#86D2E5</item>
+        <item name="colorAccent">#86D2E5</item>
+        <item name="boxStrokeWidth">2dp</item>
+    </style>
+
 
 
 </resources>

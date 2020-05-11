@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -43,14 +44,17 @@ public class ActivitySecond21 extends AppCompatActivity {
     public int itemPosition;
     public boolean isUnpairing = false;
     public boolean isSwitchedOn = false;
-
     //to disable the functionality of back button in android phones
+
     @Override
     public void onBackPressed(){ }
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
 
         // On Screen load
         setContentView(R.layout.activity_second_screenv21);
@@ -142,68 +146,101 @@ public class ActivitySecond21 extends AppCompatActivity {
             }
 
             // On switch click
-            bluetoothSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    Log.d("SAMPLE", "ON CLICK SWITCH!");
-                    Log.d("SAMPLE", "CHECK isChecked value : " + isChecked);
-                    // If switch is turned on
-                    if (isChecked) {
-                        isSwitchedOn = true;
-                        Log.d("SAMPLE", "Setting Switch to on!");
-                        on(buttonView);
-
-                        // Search devices button
-                        searchBtn = findViewById(R.id.searchBtn);
-                        searchBtn.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                if (isSwitchedOn) {
-                                    Log.v("SAMPLE", "Inside onCheckedChanged");
-                                    searchDevices(v);
-                                } else {
-                                    Toast.makeText(getApplicationContext(),"Bluetooth is currently turned off",
-                                            Toast.LENGTH_LONG).show();
-                                }
-                            }
-                        });
-
-                        // On discovered item click
-                        myListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                            @Override
-                            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                                // Broadcasts receiver to detect if device has paired, pairing, or not.
-                                IntentFilter filter = new IntentFilter(BluetoothDevice.ACTION_BOND_STATE_CHANGED);
-                                registerReceiver(mBroadcastReceiver4, filter);
-
-                                String selectedItem = (String) parent.getItemAtPosition(position);
-                                pairedDevices = myBluetoothAdapter.getBondedDevices();
-
-                                for(BluetoothDevice bt : pairedDevices)
-                                    Log.v("SAMPLE", "Currently paired devices: " + bt.getName());
-
-                                Log.v("SAMPLE", "mBTDevices: " + mBTDevices);
-
-                                if (mBTDevices.size() > 0) {
-                                    pairDevice(position);
-                                }
-                                else {
-                                    Toast.makeText(ActivitySecond21.this, "unable to connect", Toast.LENGTH_SHORT).show();
-                                }
-
-                            }
-                        });
-
-                    } else {
-                        isSwitchedOn = false;
-                        Log.d("SAMPLE", "Setting Switch to off!");
-                        off(buttonView);
-                    }
-                }
-            });
+            // On switch click
+            bluetoothSwitch.setOnCheckedChangeListener(listener);
 
         }
 
+    }
+
+    CompoundButton.OnCheckedChangeListener listener = new CompoundButton.OnCheckedChangeListener() {
+        @Override
+        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+            Log.d("SAMPLE", "ON CLICK SWITCH!");
+            Log.d("SAMPLE", "CHECK isChecked value : " + isChecked);
+            // If switch is turned on
+            if (isChecked) {
+                switchOn(buttonView);
+            } else {
+                switchOff(buttonView);
+            }
+        }
+    };
+
+    @Override
+    public void onWindowFocusChanged(final boolean hasFocus) {
+        if (!hasFocus) return;
+        Handler h = new Handler();
+        Runnable r = new Runnable() {
+            @Override
+            public void run() {
+                BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+                if (mBluetoothAdapter == null) {
+                    // Device does not support Bluetooth
+                } else if (!mBluetoothAdapter.isEnabled()) {
+                    bluetoothSwitch.setChecked(false);
+                } else {
+                    bluetoothSwitch.setChecked(true);
+                }
+                bluetoothSwitch.invalidate();
+            }
+        };
+        h.postDelayed(r,1000);
+        super.onWindowFocusChanged(hasFocus);
+    }
+
+    private void switchOff(CompoundButton buttonView){
+        isSwitchedOn = false;
+        Log.d("SAMPLE", "Setting Switch to off!");
+        off(buttonView);
+    }
+
+    public void switchOn(CompoundButton buttonView){
+        isSwitchedOn = true;
+        Log.d("SAMPLE", "Setting Switch to on!");
+        on(buttonView);
+
+        // Search devices button
+        searchBtn = findViewById(R.id.searchBtn);
+        searchBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (isSwitchedOn) {
+                    Log.v("SAMPLE", "Inside onCheckedChanged");
+                    searchDevices(v);
+                } else {
+                    Toast.makeText(getApplicationContext(),"Bluetooth is currently turned off",
+                            Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+        // On discovered item click
+        myListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                // Broadcasts receiver to detect if device has paired, pairing, or not.
+                IntentFilter filter = new IntentFilter(BluetoothDevice.ACTION_BOND_STATE_CHANGED);
+                registerReceiver(mBroadcastReceiver4, filter);
+
+                String selectedItem = (String) parent.getItemAtPosition(position);
+                pairedDevices = myBluetoothAdapter.getBondedDevices();
+
+                for(BluetoothDevice bt : pairedDevices)
+                    Log.v("SAMPLE", "Currently paired devices: " + bt.getName());
+
+                Log.v("SAMPLE", "mBTDevices: " + mBTDevices);
+
+                if (mBTDevices.size() > 0) {
+                    pairDevice(position);
+                }
+                else {
+                    Toast.makeText(ActivitySecond21.this, "unable to connect", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
     }
 
     public void openActivityThirdV2() {

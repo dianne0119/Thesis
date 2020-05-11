@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Kristia Alvarez\\Documents\\THESIS\\APP\\With Encryption\\FinalThesis\\Thesis\\motorcycleApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-port\\values-port.xml",
+            "outputFile": "/home/dayaanaem19/Documents/ThesisGithubRepo/motorcycleApp/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-port/values-port.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Kristia Alvarez\\.gradle\\caches\\transforms-2\\files-2.1\\f5bdf8930f5b0dade80802408310dda6\\appcompat-1.1.0\\res\\values-port\\values-port.xml",
+                    "source": "/home/dayaanaem19/.gradle/caches/transforms-2/files-2.1/f5bdf8930f5b0dade80802408310dda6/appcompat-1.1.0/res/values-port/values-port.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

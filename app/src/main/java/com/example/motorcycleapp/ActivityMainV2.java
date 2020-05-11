@@ -55,7 +55,6 @@ public class ActivityMainV2 extends AppCompatActivity {
         final String bleStat = database.getString("bluetoothStat","");
         final String bleImmoNotPaired = database.getString("bluetoothImmoNotPaired","");
         final String lockDownStatus = database.getString("lockDownStat","");
-        final String notLoggedOutStatus = database.getString("NotLoggedOut","");
 
         loginButton.setEnabled(!registeredUsername.isEmpty() && !registeredPassword.isEmpty());
 
@@ -93,8 +92,6 @@ public class ActivityMainV2 extends AppCompatActivity {
             });
 
             builder.show();
-        } else if (notLoggedOutStatus.equals("on")) {
-            openActivityFourthV2();
         }
 
         if (lockDownStatus.equals("on")) {
@@ -109,8 +106,8 @@ public class ActivityMainV2 extends AppCompatActivity {
             signUpBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    openActivityThirdV2();
-/*                  AlertDialog.Builder builder = new AlertDialog.Builder(ActivityMainV2.this);
+
+                    AlertDialog.Builder builder = new AlertDialog.Builder(ActivityMainV2.this);
                     builder.setCancelable(true);
                     builder.setTitle("CONFIRM DELETION");
                     builder.setMessage("Creating a new account will remove your previous account entirely. Are you sure you want to continue?");
@@ -152,7 +149,7 @@ public class ActivityMainV2 extends AppCompatActivity {
                     } else {
                         openActivitySecond21();
                     }
-*/
+
                 }
             });
 
@@ -195,9 +192,6 @@ public class ActivityMainV2 extends AppCompatActivity {
                     if((usernameValue.equals(registeredUsername)) && (passwordValue.equals(registeredPassword)) ){
                         Name.setText("");
                         Password.setText("");
-                        SharedPreferences.Editor editor = database.edit();
-                        editor.putString("NotLoggedOut","on");
-                        editor.apply();
                         openActivityFourthV2();
                     } else if (usernameValue.isEmpty() || passwordValue.isEmpty()) {
                         Toast.makeText(ActivityMainV2.this, "Invalid! Must input username and password", Toast.LENGTH_SHORT).show();
@@ -274,13 +268,6 @@ public class ActivityMainV2 extends AppCompatActivity {
     public void openActivitySecond21() {
         Intent intent = new Intent(this, ActivitySecond21.class);
         startActivity(intent);
-    }
-
-    public void openActivityThirdV2() {
-        Intent intent = new Intent(this, ActivityThirdV2.class);
-        startActivity(intent);
-
-        // NOTE: To success fully connect to screen, declare class name in AndroidManifest.xml
     }
 
     public void openActivitySeventh2() {
