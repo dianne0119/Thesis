@@ -1427,6 +1427,8 @@ drawable design_snackbar_background
 drawable header1
 drawable header2
 drawable header3
+drawable ic_404
+drawable ic_4042
 drawable ic_action_code
 drawable ic_action_pass
 drawable ic_action_pin
@@ -1657,6 +1659,7 @@ id line3
 id listMode
 id list_item
 id load
+id lockDownImage
 id logOutButton
 id loginButton
 id lottie_layer_name

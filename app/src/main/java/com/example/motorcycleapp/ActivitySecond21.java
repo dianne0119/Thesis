@@ -193,6 +193,8 @@ public class ActivitySecond21 extends AppCompatActivity {
         isSwitchedOn = false;
         Log.d("SAMPLE", "Setting Switch to off!");
         off(buttonView);
+        pDeviceName.setVisibility(View.INVISIBLE);
+
     }
 
     public void switchOn(CompoundButton buttonView){

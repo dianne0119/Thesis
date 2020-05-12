@@ -23,7 +23,7 @@
         app:layout_constraintStart_toStartOf="@+id/textView7" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/lockDownImage"
         android:layout_width="332dp"
         android:layout_height="303dp"
         android:layout_marginTop="136dp"
@@ -31,7 +31,7 @@
         app:layout_constraintEnd_toEndOf="@+id/textView4"
         app:layout_constraintStart_toStartOf="@+id/textView4"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_404" />
+        android:src="@drawable/ic_404" />
 
     <TextView
         android:id="@+id/textView7"
