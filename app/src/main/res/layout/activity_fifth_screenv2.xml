@@ -87,6 +87,19 @@
         app:layout_constraintStart_toStartOf="@+id/animation_view"
         app:layout_constraintTop_toBottomOf="@+id/animation_view" />
 
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/blueCountDown"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="36dp"
+        app:layout_constraintBottom_toTopOf="@+id/changeKeyBtn"
+        app:layout_constraintEnd_toEndOf="@+id/changeKeyBtn"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/changeKeyBtn"
+        app:lottie_fileName="countDown.json"
+        app:lottie_loop="false" />
+
     <Button
         android:id="@+id/changeKeyBtn"
         style="@style/Widget.MaterialComponents.Button.Icon"

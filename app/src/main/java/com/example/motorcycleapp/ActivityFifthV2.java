@@ -39,6 +39,7 @@ import java.util.concurrent.TimeUnit;
 public class ActivityFifthV2 extends AppCompatActivity {
 
     private LottieAnimationView animation_view;
+    private LottieAnimationView animation_countDown;
     private Button changeKeyBtn;
     private TextView manualDesc;
     private TextView resetDesc;
@@ -79,6 +80,7 @@ public class ActivityFifthV2 extends AppCompatActivity {
         resetDesc=findViewById(R.id.resetDesc);
         ResetBtn=findViewById(R.id.ResetBtn);
         animation_view=findViewById(R.id.animation_view);
+        animation_countDown=findViewById(R.id.blueCountDown);
 
         Intent gattServiceIntent = new Intent(this, BluetoothLeService.class);
         bindService(gattServiceIntent, mServiceConnection, BIND_AUTO_CREATE);
@@ -130,6 +132,7 @@ public class ActivityFifthV2 extends AppCompatActivity {
                         else {
                             resetDesc.setVisibility(View.VISIBLE);
                         }
+
                     }
 
                     @Override
@@ -139,15 +142,23 @@ public class ActivityFifthV2 extends AppCompatActivity {
                     @Override
                     public void onAnimationRepeat(Animator animation) {
                     }
+
                 });
+
+                animation_countDown.setAnimation("countDown.json");
+                animation_countDown.playAnimation();
+
+
 
                 changeKeyBtn.setEnabled(false);
                 ResetBtn.setEnabled(false);
                 Timer buttonTimer = new Timer();
                 buttonTimer.schedule(new TimerTask() {
 
+
                     @Override
                     public void run() {
+
                         runOnUiThread(new Runnable() {
 
                             @Override
@@ -155,11 +166,14 @@ public class ActivityFifthV2 extends AppCompatActivity {
                                 changeKeyBtn.setEnabled(true);
                                 ResetBtn.setEnabled(true);
                             }
+
                         });
                     }
+
                 }, 1);
 
             }
+
         });
 
         ResetBtn.setOnClickListener(new View.OnClickListener() {
@@ -170,7 +184,8 @@ public class ActivityFifthV2 extends AppCompatActivity {
                 manualResetKeyCodeThread thread3 = new manualResetKeyCodeThread();
                 thread3.setPriority(3);
                 thread3.start();
-
+                animation_countDown.setAnimation("countDown.json");
+                animation_countDown.playAnimation();
                 animation_view.setAnimation("reset_check.json");
                 animation_view.playAnimation();
                 animation_view.addAnimatorListener(new Animator.AnimatorListener() {
