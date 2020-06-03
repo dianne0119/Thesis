@@ -86,6 +86,7 @@
             android:drawablePadding="10dp"
             android:ems="5"
             android:hint="New PIN"
+            android:maxLength="4"
             android:inputType="numberPassword"
             android:paddingLeft="10dp" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -96,7 +97,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Sign in"
-        android:textColor="#1B1515"
+        android:textColor="#86D2E5"
         android:textSize="15sp"
         android:fontFamily="sans-serif"
         app:layout_constraintEnd_toEndOf="@+id/textInputLayout11"
@@ -137,6 +138,7 @@
             android:drawableStart="@drawable/ic_action_pin"
             android:drawablePadding="10dp"
             android:ems="5"
+            android:maxLength="4"
             android:hint="Confirm New PIN"
             android:inputType="numberPassword"
             android:paddingLeft="10dp" />

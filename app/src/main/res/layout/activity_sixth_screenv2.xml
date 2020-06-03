@@ -68,6 +68,7 @@
             android:drawablePadding="10dp"
             android:ems="5"
             android:hint="Recovery Code"
+            android:maxLength="8"
             android:inputType="textPassword"
             android:paddingLeft="10dp" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -91,7 +92,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Sign in"
-        android:textColor="#1B1515"
+        android:textColor="#86D2E5"
         android:textSize="15sp"
         android:fontFamily="sans-serif"
         app:layout_constraintEnd_toEndOf="parent"

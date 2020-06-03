@@ -52,6 +52,7 @@
             android:drawableStart="@drawable/ic_action_pass"
             android:drawablePadding="10dp"
             android:ems="5"
+            android:maxLength="16"
             android:hint="Confirm Password"
             android:inputType="textPassword"
             android:paddingLeft="10dp" />
@@ -81,6 +82,7 @@
             android:drawableStart="@drawable/ic_action_pass"
             android:drawablePadding="10dp"
             android:ems="5"
+            android:maxLength="16"
             android:hint="Password"
             android:inputType="textPassword"
             android:paddingLeft="10dp" />

@@ -76,7 +76,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Forgot Password?"
-        android:textColor="#746971"
+        android:textColor="#86D2E5"
         android:textSize="15sp"
         android:fontFamily="sans-serif"
         app:layout_constraintBottom_toTopOf="@+id/loginButton"
@@ -108,6 +108,7 @@
             android:drawableStart="@drawable/ic_action_pass"
             android:drawablePadding="10dp"
             android:ems="5"
+            android:maxLength="16"
             android:hint="Password"
             android:inputType="textPassword"
             android:paddingLeft="10dp" />
@@ -175,6 +176,7 @@
             android:drawableLeft="@drawable/ic_action_user"
             android:drawablePadding="10dp"
             android:ems="5"
+            android:maxLength="16"
             android:hint="Username"
             android:inputType="textPersonName"
             android:paddingLeft="10dp" />

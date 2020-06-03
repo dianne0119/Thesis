@@ -82,6 +82,30 @@ public class ActivityFifthV2 extends AppCompatActivity {
         animation_view=findViewById(R.id.animation_view);
         animation_countDown=findViewById(R.id.blueCountDown);
 
+        animation_countDown.setVisibility(View.INVISIBLE);
+        animation_countDown.addAnimatorListener(new Animator.AnimatorListener() {
+            @Override
+            public void onAnimationStart(Animator animation) {
+                animation_countDown.setVisibility(View.VISIBLE);
+            }
+
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                animation_countDown.setVisibility(View.INVISIBLE);
+                animation_countDown.cancelAnimation();
+            }
+
+            @Override
+            public void onAnimationCancel(Animator animation) {
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animator animation) {
+
+            }
+        });
+
         Intent gattServiceIntent = new Intent(this, BluetoothLeService.class);
         bindService(gattServiceIntent, mServiceConnection, BIND_AUTO_CREATE);
 
@@ -147,8 +171,7 @@ public class ActivityFifthV2 extends AppCompatActivity {
 
                 animation_countDown.setAnimation("countDown.json");
                 animation_countDown.playAnimation();
-
-
+                animation_countDown.setVisibility(View.VISIBLE);
 
                 changeKeyBtn.setEnabled(false);
                 ResetBtn.setEnabled(false);
@@ -186,6 +209,8 @@ public class ActivityFifthV2 extends AppCompatActivity {
                 thread3.start();
                 animation_countDown.setAnimation("countDown.json");
                 animation_countDown.playAnimation();
+                animation_countDown.setVisibility(View.VISIBLE);
+
                 animation_view.setAnimation("reset_check.json");
                 animation_view.playAnimation();
                 animation_view.addAnimatorListener(new Animator.AnimatorListener() {
